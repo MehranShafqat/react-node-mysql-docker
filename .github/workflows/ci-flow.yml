@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./client
+        working-directory: client
     
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
