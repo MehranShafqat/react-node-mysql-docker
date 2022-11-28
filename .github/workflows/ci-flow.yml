@@ -11,8 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - name: "change diretory"
-        working-directory: ./client
-        run: ls
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v1
+    - name: Build and Push to mehran org
+      working-directory: ./client
+      uses: humanitec/build-push-to-humanitec@master
+      with:
+        humanitec-token: ${{ secrets.HUMANITEC_TOKEN }}
+        organization: mehran-org-prod
+        auto-tag: true
      
