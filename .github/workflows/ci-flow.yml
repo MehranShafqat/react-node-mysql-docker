@@ -12,10 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: "ls"
-        run: ls
-      - name: "change dir to client"
-        run: cd client
-      - name: "clent ls"
+      - name: "change diretory"
+        working-directory: ./client
         run: ls
      
