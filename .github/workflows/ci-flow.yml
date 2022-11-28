@@ -13,9 +13,6 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v1
-    - name: Run maven command
-    run: |
-      cd ./client
     - name: Build and Push to mehran org
       uses: humanitec/build-push-to-humanitec@master
       with:
