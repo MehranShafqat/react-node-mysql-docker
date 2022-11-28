@@ -15,7 +15,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build and Push to mehran org
       uses: humanitec/build-push-to-humanitec@master
-      working-directory: ./client
       with:
         humanitec-token: ${{ secrets.HUMANITEC_TOKEN }}
         organization: mehran-org-prod
